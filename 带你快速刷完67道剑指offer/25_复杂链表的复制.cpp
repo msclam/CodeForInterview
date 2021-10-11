@@ -4,7 +4,7 @@ using namespace std;
 
 struct Node {
     int val;
-    struct RandomListNode *next, *random;
+    struct Node *next, *random;
     Node(int x) :
             val(x), next(NULL), random(NULL) {
     }
@@ -17,7 +17,7 @@ public:
         unordered_map<Node *, Node *> mp;
         
         for (Node* p = head; p != nullptr; p = p->next) {
-            mp[p] = new RandomListNode(p->val);
+            mp[p] = new Node(p->val);
         }
         
         for (Node* p = head; p != nullptr; p = p->next) {
