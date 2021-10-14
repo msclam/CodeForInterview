@@ -12,17 +12,28 @@ public:
         }
         return cnt;
     }
+<<<<<<< HEAD
     
     int NumberOf1Between1AndN_Solution(int n) {
+=======
+    int NumberOf1Between1AndN_Solution(int n) {
+        // 暴力方法
+>>>>>>> 1b52e793c5f93c628989990f36a3b706aa831259
 //         int res = 0;
 //         for (int i = 1; i <= n; i ++ ) {
 //             res += getOne(i);
 //         }
 //         return res;
+<<<<<<< HEAD
         
         int high = n / 10, cur = n % 10, low = 0;
         int digit = 1;
         int cnt = 0;
+=======
+        int cnt = 0;
+        int high = n / 10, cur = n % 10, low = 0;
+        int digit = 1;
+>>>>>>> 1b52e793c5f93c628989990f36a3b706aa831259
         while (high != 0 || cur != 0) {
             if (cur == 0) {
                 cnt += high * digit;
