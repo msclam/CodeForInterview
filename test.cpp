@@ -16,7 +16,19 @@ void insertSort(vector<int> &A, int n) {
 
 // 2 折半插入
 void halfInsertSort(vector<int> &A, int n) {
-    
+    for (int i = 0; i < n; i ++ ) {
+        int tmp = A[i], j;
+        int l = 0, r = i;
+        while (l < r) {
+            int mid = l + r >> 1;
+            if (A[mid] <= tmp) l = mid + 1;
+            else r = mid;
+        }
+        for (j = i - 1; j >= l; j -- ) {
+            A[j + 1] = A[j];
+        }
+        A[j + 1] = tmp;
+    }
 }
 
 int main() {
