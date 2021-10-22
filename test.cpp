@@ -157,7 +157,7 @@ void merge(vector<int>&A, vector<int> &tmp, int l1, int r1, int l2, int r2) {
     while (j <= r2) {
         tmp[idx++] = A[j++];
     }
-    
+
     copy(tmp.begin() + l1, tmp.begin() + r2 + 1, A.begin() + l1);
 }
 
@@ -168,6 +168,32 @@ void mergeSort(vector<int>&A, vector<int> &tmp, int l, int r) {
         mergeSort(A, tmp, mid + 1, r);
         merge(A, tmp, l, mid, mid + 1, r);
     }
+}
+
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode() : val(0), left(nullptr), right(nullptr) {}
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ };
+
+void notInorder(TreeNode* root, vector<int> &res) {
+    if (root == nullptr) return;
+    stack<TreeNode*> st;
+    while (!st.empty() || root != nullptr) {
+        while (root != nullptr) {
+            st.push(root);
+            root = root->left;
+        }
+        if (!st.empty()) {
+            root = st.top();
+            st.pop();
+            res.push_back(root->val);
+            root = root->right;
+        }
+    } 
 }
 
 int main() {
