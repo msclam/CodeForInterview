@@ -98,8 +98,18 @@ void heapSort(vector<int> &A, int n) {
     }
 }
 
-void halfInsertSort(vector<int> &A, int n) {
-
+void selectSort(vector<int> &A, int n) {
+    for (int i = 0; i < n - 1; i ++ ) {
+        int min = i;
+        for (int j = i + 1; j < n; j ++ ) {
+            if (A[j] < A[min]) {
+                min = j;
+            }
+        }
+        if (min != i) {
+            swap(A[min], A[i]);
+        }
+    }
 }
 
 void halfInsertSort(vector<int> &A, int n) {
@@ -118,6 +128,30 @@ void halfInsertSort(vector<int> &A, int n) {
     }
 }
 
+void insertSort(vector<int> &A, int n) {
+    for (int i = 0; i < n; i ++ ) {
+        int tmp = A[i], j;
+        for (j = i - 1; j >= 0 && tmp < A[j]; j -- ) {
+            A[j + 1] = A[j];
+        }
+        A[j + 1] = tmp;
+    }
+}
+
+void shellSort(vector<int> &A, int n) {
+    for (int dk = n / 2; dk >= 1; dk /= 2 ) {
+        for (int i = dk; i < n; i ++ ) {
+            if (A[i - dk] > A[i]) {
+                int tmp = A[i], j;
+                for (j = i - dk; j >= 0 && tmp < A[j]; j -= dk ) {
+                    A[j + dk] = A[j];
+                }
+                A[j + dk] = tmp;
+            }
+        }
+    }
+}
+
 int main() {
     // vector<int> A = {-7, -5, -4, -1, -1, -1, 0, 0, 4, 7, 9 };
     vector<int> A = {-4, 0, 7, 4, 9, -5, -1, 0, -7, -1, 91, 0};
@@ -129,9 +163,9 @@ int main() {
     // quick_sort(A, 0, n - 1);
     // mergeSort(A, tmp, 0, n - 1);
     // heapSort(A, n);
-    halfInsertSort(A, n);
+    // halfInsertSort(A, n);
     // insertSort(A, n);
-    // shellSort(A, n);
+    shellSort(A, n);
     // selectSort(A, n);
 
 
