@@ -48,3 +48,26 @@ int main() {
     else cout << "Not found" << endl;
     return 0;
 }
+
+// int main() {
+//     vector<int> A;
+//     int n, x;
+
+//     int l = 0, r = n - 1;
+//     while (l < r) { // 找第一个x
+//         int mid = l + r >> 1;
+//         if (A[mid] < x) l = mid + 1;
+//         else r = mid;
+//     }
+//     if (A[l] != x) return -1;
+//     return l;
+
+
+//     while (l < r) {  // 找最后一个x
+//         int mid = l + r + 1 >> 1;
+//         if (A[mid] > x) r = mid - 1;
+//         else l = mid;
+//     }
+//     if (A[l] != x) return -1;
+//     return l;
+// }
