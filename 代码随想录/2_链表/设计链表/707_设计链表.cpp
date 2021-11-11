@@ -68,6 +68,16 @@ public:
         cur->next = cur->next->next;
         size--;
     }
+
+    void printLinkedList() {
+        LinkedNode* cur = head;
+        while (cur->next != nullptr) {
+            cout << cur->next->val << " ";
+            cur = cur->next;
+        }
+        cout << endl;
+    }
+
 private:
     int size;
     LinkedNode* head;
