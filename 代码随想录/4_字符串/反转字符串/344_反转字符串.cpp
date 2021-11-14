@@ -8,6 +8,10 @@ public:
         for (int i = 0; i < (r - l + 1) / 2; i ++ ) {
             swap(s[l + i], s[r - i]);
         }
+
+        // for (int i = l, j = r; i < j; i ++, j -- ) {
+        //     swap(s[i], s[j]);
+        // }
     }
     void reverseString(vector<char>& s) {
         int n = s.size();
