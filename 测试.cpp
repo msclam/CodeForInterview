@@ -153,26 +153,29 @@ void shellSort(vector<int> &A, int n) {
 }
 
 int main() {
-    // vector<int> A = {-7, -5, -4, -1, -1, -1, 0, 0, 4, 7, 9 };
-    vector<int> A = {-4, 0, 7, 4, 9, -5, -1, 0, -7, -1, 91, 0};
-    int n = A.size();
-    vector<int> tmp(n, 0);
+    // // vector<int> A = {-7, -5, -4, -1, -1, -1, 0, 0, 4, 7, 9 };
+    // vector<int> A = {-4, 0, 7, 4, 9, -5, -1, 0, -7, -1, 91, 0};
+    // int n = A.size();
+    // vector<int> tmp(n, 0);
     
-    // bubbleSort(A, n);
-    // quickSort(A, 0, n - 1);
-    // quick_sort(A, 0, n - 1);
-    // mergeSort(A, tmp, 0, n - 1);
-    // heapSort(A, n);
-    // halfInsertSort(A, n);
-    // insertSort(A, n);
-    shellSort(A, n);
-    // selectSort(A, n);
+    // // bubbleSort(A, n);
+    // // quickSort(A, 0, n - 1);
+    // // quick_sort(A, 0, n - 1);
+    // // mergeSort(A, tmp, 0, n - 1);
+    // // heapSort(A, n);
+    // // halfInsertSort(A, n);
+    // // insertSort(A, n);
+    // shellSort(A, n);
+    // // selectSort(A, n);
 
 
-    for (int i : A) {
-        cout << i << " ";
-    }
-    cout << endl;
+    // for (int i : A) {
+    //     cout << i << " ";
+    // }
+    // cout << endl;
+
+    char c = 65;
+
 
     return 0;
 }

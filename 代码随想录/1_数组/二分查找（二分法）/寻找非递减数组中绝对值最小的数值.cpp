@@ -25,7 +25,7 @@ int findMin(vector<int> &A, int n) {
 
 int main() {
 
-    vector<int> A = {-2, -1, 2, 3};
+    vector<int> A = {-2, -1, 2, 3, 6};
     int t = findMin(A, A.size());
     cout << t;
     return 0;
