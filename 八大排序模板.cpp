@@ -36,8 +36,8 @@ void merge(vector<int> &A, int l1, int r1, int l2, int r2) {
     while (i <= r1) tmp[idx++] = A[i++];
     while (j <= r2) tmp[idx++] = A[j++];
 
-    for (int i = 0; i < idx; i ++ ) {
-        A[l1 + i] = tmp[i];
+    for (int k = 0; k < idx; k ++ ) {
+        A[l1 + k] = tmp[k];
     } 
 }
 
